@@ -1,0 +1,447 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(145deg, #003366, #002244); /* Dark Blue Gradient */
+  color: #FFD700; /* Golden Yellow */
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Glossy Finish */
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+  background: linear-gradient(145deg, #002244, #003366); /* Inverted Gradient on Hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+header h1 {
+  margin: 0; /* Ensure margin is zero for centering */
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: auto; 
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* Mobile Menu Bar Styles */
+.menu-bar {
+  position: fixed;
+  top: 70px; /* Below the header */
+  right: -200px; /* Initially hidden off-screen */
+  width: 150px; /* Smaller width */
+  height: auto;
+  background: #003366; /* Dark Blue */
+  color: #FFD700; /* Golden Yellow */
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  transition: right 0.3s ease; /* Smooth slide-in effect */
+  z-index: 999;
+}
+
+.menu-bar.active {
+  right: 0; /* Slide in when active */
+}
+
+.menu-bar ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu-bar ul li {
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.menu-bar ul li a {
+  color: #FFD700; /* Golden Yellow */
+  text-decoration: none;
+  font-size: 1.2em; /* Smaller font size */
+  transition: color 0.3s ease;
+}
+
+.menu-bar ul li a:hover {
+  color: #FFC107; /* Slightly darker golden yellow on hover */
+}
+
+/* Main Styles */
+main {
+  padding: 80px 20px 20px; /* Added padding to account for fixed header */
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: #003366; /* Dark Blue */
+  color: #FFD700; /* Golden Yellow */
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.hero-banner:hover::before {
+  opacity: 1;
+}
+
+.hero-banner h2, .hero-banner h4 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-banner h4 {
+  font-size: 1.7em;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-banner a {
+  display: inline-block;
+  padding: 12px 25px;
+  color: #fff;
+  background: #FFD700; /* Golden Yellow */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: bounceIn 1s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.hero-banner a:hover {
+  background: #FFC107; /* Slightly darker golden yellow on hover */
+  transform: scale(1.05);
+}
+
+/* About Us Section */
+.about-us {
+  background: #fff;
+  color: #003366; /* Dark Blue */
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-us .about-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-us h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.about-us p {
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+/* Services Section */
+.services {
+  background: #fff;
+  color: #003366; /* Dark Blue */
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.services .service-item {
+  flex: 1;
+  min-width: 250px;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services ul li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+/* Appointments Section */
+.appointments {
+  background: url('https://raw.githubusercontent.com/mohid147/pics/main/Blue%20Professional%20Doctor%20YouTube%20Thumbnail.png') no-repeat center center; /* Background Image */
+  background-size: cover;
+  color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appointments::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.appointments h2, .appointments p {
+  position: relative;
+  z-index: 2;
+}
+
+.appointments a {
+  display: inline-block;
+  padding: 12px 25px;
+  color: #003366; /* Dark Blue */
+  background: #FFD700; /* Golden Yellow */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.appointments a:hover {
+  background: #FFC107; /* Slightly darker golden yellow on hover */
+  transform: scale(1.05);
+}
+
+/* Contact Us Section */
+.contact-us {
+  background: #fff;
+  color: #003366; /* Dark Blue */
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contact-us h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-us form input,
+.contact-us form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.contact-us form input:focus,
+.contact-us form textarea:focus {
+  border-color: #FFD700; /* Golden Yellow */
+  outline: none;
+}
+
+.contact-us form button {
+  padding: 12px 25px;
+  color: #fff;
+  background: #003366; /* Dark Blue */
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-us form button:hover {
+  background: #002244; /* Slightly darker blue */
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: #003366; /* Dark Blue */
+  color: #FFD700; /* Golden Yellow */
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+  80% {
+    transform: translateY(-1px);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .menu-bar {
+    width: 200px; /* Wider menu for easier interaction on tablets */
+  }
+
+  .menu-bar ul li a {
+    font-size: 1.5em; /* Larger font size for readability on tablets */
+  }
+
+  .hero-banner {
+    padding: 40px 10px;
+  }
+
+  .hero-banner h2 {
+    font-size: 2.5em;
+  }
+
+  .hero-banner h4 {
+    font-size: 1.5em;
+  }
+
+  .hero-banner a {
+    font-size: 1em;
+  }
+
+  .about-us, .services, .appointments, .contact-us {
+    padding: 15px;
+  }
+
+  .contact-us form {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0;
+  }
+
+  .menu-bar {
+    width: 40%; /* Full-width menu for mobile */
+    right: 0; /* Ensure menu is visible */
+    top: 70px; /* Adjust position below the header */
+  }
+
+  .menu-bar ul {
+    padding: 10px;
+  }
+
+  .menu-bar ul li {
+    margin-bottom: 10px; /* Reduced margin */
+  }
+
+  .hero-banner {
+    padding: 30px 10px;
+  }
+
+  .hero-banner h2 {
+    font-size: 2em;
+  }
+
+  .hero-banner h4 {
+    font-size: 1.3em;
+  }
+
+  .hero-banner a {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .about-us, .services, .appointments, .contact-us {
+    padding: 10px;
+  }
+
+  .contact-us form {
+    gap: 5px;
+  }
+}
