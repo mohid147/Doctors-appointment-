@@ -38,7 +38,7 @@ header .header-content {
 
 header h1 {
   margin: 0;
-  font-size: 1.4em; /* Adjusted font size for header */
+  font-size: 1.4em; 
 }
 
 .menu-toggle {
@@ -143,7 +143,7 @@ main {
 .hero-banner a {
   display: inline-block;
   padding: 12px 25px;
-  color: #fff;
+  color: #000000;
   background: #FFD700;
   text-decoration: none;
   border-radius: 5px;
