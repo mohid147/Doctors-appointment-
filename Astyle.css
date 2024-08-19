@@ -1,11 +1,9 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -13,22 +11,21 @@ body {
   color: #333;
 }
 
-/* Header Styles */
 header {
-  background: linear-gradient(145deg, #003366, #002244); /* Dark Blue Gradient */
-  color: #FFD700; /* Golden Yellow */
+  background: linear-gradient(145deg, #003366, #002244);
+  color: #FFD700;
   padding: 15px 0;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Glossy Finish */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 header:hover {
-  background: linear-gradient(145deg, #002244, #003366); /* Inverted Gradient on Hover */
+  background: linear-gradient(145deg, #002244, #003366);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
@@ -40,32 +37,32 @@ header .header-content {
 }
 
 header h1 {
-  margin: 0; /* Ensure margin is zero for centering */
+  margin: 0;
+  font-size: 1.4em; /* Adjusted font size for header */
 }
 
-/* Menu Toggle Styles */
 .menu-toggle {
-  display: auto; 
-  font-size: 2em;
+  display: block;
+  font-size: 1.8em;
   cursor: pointer;
+  margin: 10px;
 }
 
-/* Mobile Menu Bar Styles */
 .menu-bar {
   position: fixed;
-  top: 70px; /* Below the header */
-  right: -200px; /* Initially hidden off-screen */
-  width: 150px; /* Smaller width */
-  height: auto;
-  background: #003366; /* Dark Blue */
-  color: #FFD700; /* Golden Yellow */
+  top: 80px; 
+  right: -100%;
+  width: 40%;
+  background: #003366;
+  color: #FFD700;
+  text-align: center;
   box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-  transition: right 0.3s ease; /* Smooth slide-in effect */
+  transition: right 0.3s ease;
   z-index: 999;
 }
 
 .menu-bar.active {
-  right: 0; /* Slide in when active */
+  right: 0;
 }
 
 .menu-bar ul {
@@ -75,29 +72,27 @@ header h1 {
 }
 
 .menu-bar ul li {
-  margin-bottom: 15px; /* Reduced margin */
+  margin-bottom: 15px;
 }
 
 .menu-bar ul li a {
-  color: #FFD700; /* Golden Yellow */
+  color: #FFD700;
   text-decoration: none;
-  font-size: 1.2em; /* Smaller font size */
+  font-size: 1.2em;
   transition: color 0.3s ease;
 }
 
 .menu-bar ul li a:hover {
-  color: #FFC107; /* Slightly darker golden yellow on hover */
+  color: #FFC107;
 }
 
-/* Main Styles */
 main {
-  padding: 80px 20px 20px; /* Added padding to account for fixed header */
+  padding: 80px 20px 20px;
 }
 
-/* Hero Banner */
 .hero-banner {
-  background: #003366; /* Dark Blue */
-  color: #FFD700; /* Golden Yellow */
+  background: #003366;
+  color: #FFD700;
   text-align: center;
   padding: 60px 20px;
   border-radius: 12px;
@@ -131,14 +126,14 @@ main {
 }
 
 .hero-banner h2 {
-  font-size: 3em;
+  font-size: 2.5em; 
   margin-bottom: 10px;
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
 }
 
 .hero-banner h4 {
-  font-size: 1.7em;
+  font-size: 1.4em; 
   margin-bottom: 20px;
   opacity: 0;
   animation: fadeInUp 1.2s ease-out forwards;
@@ -149,7 +144,7 @@ main {
   display: inline-block;
   padding: 12px 25px;
   color: #fff;
-  background: #FFD700; /* Golden Yellow */
+  background: #FFD700;
   text-decoration: none;
   border-radius: 5px;
   font-size: 1.2em;
@@ -160,54 +155,32 @@ main {
 }
 
 .hero-banner a:hover {
-  background: #FFC107; /* Slightly darker golden yellow on hover */
+  background: #FFC107;
   transform: scale(1.05);
 }
 
-/* About Us Section */
-.about-us {
+.about-us, .services, .contact-us {
   background: #fff;
-  color: #003366; /* Dark Blue */
+  color: #003366;
   border-radius: 12px;
   padding: 25px;
   margin-bottom: 40px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
-.about-us .about-content {
+.about-us .about-content, .services .service-item {
   flex: 1;
   min-width: 250px;
 }
 
-.about-us h2 {
-  font-size: 2em;
+.about-us h2, .services h2 {
+  font-size: 2em; /* Adjusted font size for About Us and Services heading */
   margin-bottom: 10px;
 }
 
-.about-us p {
-  font-size: 1.2em;
+.about-us p, .services ul li {
+  font-size: 1.1em; /* Adjusted font size for About Us text and Services list items */
   line-height: 1.8;
-}
-
-/* Services Section */
-.services {
-  background: #fff;
-  color: #003366; /* Dark Blue */
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.services .service-item {
-  flex: 1;
-  min-width: 250px;
 }
 
 .services ul {
@@ -218,23 +191,18 @@ main {
 
 .services ul li {
   margin-bottom: 15px;
-  font-size: 1.1em;
 }
 
-/* Appointments Section */
 .appointments {
-  background: url('https://raw.githubusercontent.com/mohid147/pics/main/Blue%20Professional%20Doctor%20YouTube%20Thumbnail.png') no-repeat center center; /* Background Image */
+  background: url('https://raw.githubusercontent.com/mohid147/pics/main/Blue%20Professional%20Doctor%20YouTube%20Thumbnail.png') no-repeat center center;
   background-size: cover;
   color: #fff;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .appointments::before {
@@ -248,38 +216,26 @@ main {
   z-index: 1;
 }
 
-.appointments h2, .appointments p {
+.appointments h2, .appointments p, .appointments a {
   position: relative;
   z-index: 2;
 }
 
 .appointments a {
   display: inline-block;
-  padding: 12px 25px;
-  color: #003366; /* Dark Blue */
-  background: #FFD700; /* Golden Yellow */
+  padding: 8px 15px;
+  color: #003366;
+  background: #FFD700;
   text-decoration: none;
+  max-width: 200px; 
   border-radius: 5px;
-  font-size: 1.2em;
+  font-size: 1em;
   transition: background 0.3s ease, transform 0.3s ease;
-  position: relative;
-  z-index: 2;
 }
 
 .appointments a:hover {
-  background: #FFC107; /* Slightly darker golden yellow on hover */
+  background: #FFC107;
   transform: scale(1.05);
-}
-
-/* Contact Us Section */
-.contact-us {
-  background: #fff;
-  color: #003366; /* Dark Blue */
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
 }
 
 .contact-us h3 {
@@ -292,6 +248,7 @@ main {
   flex-direction: column;
   gap: 15px;
 }
+
 .contact-us form input,
 .contact-us form textarea {
   padding: 10px;
@@ -304,39 +261,25 @@ main {
 
 .contact-us form input:focus,
 .contact-us form textarea:focus {
-  border-color: #FFD700; /* Golden Yellow */
+  border-color: #FFD700;
   outline: none;
 }
 
 .contact-us form button {
   padding: 12px 25px;
   color: #fff;
-  background: #003366; /* Dark Blue */
+  background: #003366;
   border: none;
   border-radius: 5px;
   font-size: 1.2em;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .contact-us form button:hover {
-  background: #002244; /* Slightly darker blue */
-  transform: scale(1.05);
+  background: #002244;
 }
 
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 15px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  background: #003366; /* Dark Blue */
-  color: #FFD700; /* Golden Yellow */
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
-}
-
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -349,99 +292,81 @@ footer {
 }
 
 @keyframes bounceIn {
-  from, 20%, 40%, 60%, 80%, to {
-    transform: translateY(0);
-  }
-  20% {
-    transform: translateY(-10px);
-  }
-  40% {
-    transform: translateY(-5px);
+  from {
+    opacity: 0;
+    transform: scale(0.8);
   }
   60% {
-    transform: translateY(-2px);
+    opacity: 1;
+    transform: scale(1.1);
   }
-  80% {
-    transform: translateY(-1px);
-  }
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .menu-bar {
-    width: 200px; /* Wider menu for easier interaction on tablets */
-  }
-
-  .menu-bar ul li a {
-    font-size: 1.5em; /* Larger font size for readability on tablets */
-  }
-
-  .hero-banner {
-    padding: 40px 10px;
-  }
-
-  .hero-banner h2 {
-    font-size: 2.5em;
-  }
-
-  .hero-banner h4 {
-    font-size: 1.5em;
-  }
-
-  .hero-banner a {
-    font-size: 1em;
-  }
-
-  .about-us, .services, .appointments, .contact-us {
-    padding: 15px;
-  }
-
-  .contact-us form {
-    gap: 10px;
+  100% {
+    transform: scale(1);
   }
 }
 
-@media (max-width: 480px) {
-  header {
-    padding: 10px 0;
+@media (min-width: 1200px) {
+  .appointments {
+    padding: 40px;
+    min-height: 400px; 
   }
 
+  .appointments h2 {
+    font-size: 2.5em; 
+  }
+
+  .appointments p {
+    font-size: 1.1em; 
+  }
+
+  .appointments a {
+    font-size: 1.1em; 
+  }
+}
+
+@media (min-width: 768px) {
+  .appointments {
+    padding: 20px;
+    min-height: 250px; 
+  }
+
+  .appointments h2 {
+    font-size: 1.8em; 
+  }
+
+  .appointments p {
+    font-size: 1em; 
+  }
+
+  .appointments a {
+    font-size: 1em; 
+  }
+}
+
+@media (max-width: 767px) {
   .menu-bar {
-    width: 40%; /* Full-width menu for mobile */
-    right: 0; /* Ensure menu is visible */
-    top: 70px; /* Adjust position below the header */
-  }
-
-  .menu-bar ul {
-    padding: 10px;
-  }
-
-  .menu-bar ul li {
-    margin-bottom: 10px; /* Reduced margin */
-  }
-
-  .hero-banner {
-    padding: 30px 10px;
+    width: 50%;
+    top: 80px;
   }
 
   .hero-banner h2 {
-    font-size: 2em;
+    font-size: 1.8em; 
   }
 
   .hero-banner h4 {
-    font-size: 1.3em;
+    font-size: 1.2em; 
   }
 
   .hero-banner a {
-    font-size: 1em;
+    font-size: 1em; 
     padding: 10px 20px;
   }
 
-  .about-us, .services, .appointments, .contact-us {
-    padding: 10px;
+  .about-us h2, .services h2 {
+    font-size: 1.6em; 
   }
 
-  .contact-us form {
-    gap: 5px;
+  .about-us p, .services ul li {
+    font-size: 1em; 
   }
 }
